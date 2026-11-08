@@ -11,7 +11,7 @@ public class Calculator {
         Scanner scanner = new Scanner(System.in);
         boolean continueCalculation = true;
 
-        System.out.println("=== Умный Калькулятор (с приоритетом операций и корнем) ===");
+        System.out.println("Умный Калькулятор");
         System.out.println("Примеры: '2+3*4', '10/2-3', 'sqrt(16)+5', '2^3'");
 
         while (continueCalculation) {
@@ -30,7 +30,7 @@ public class Calculator {
 
             boolean validAnswer = false;
             while (!validAnswer) {
-                System.out.println("\nХотите выполнить еще одно вычисление? (строго 'да' или 'нет')");
+                System.out.println("\nХотите выполнить еще одно вычисление?");
                 String answer = scanner.nextLine().trim();
 
                 if (answer.equalsIgnoreCase("нет")) {
@@ -164,7 +164,7 @@ public class Calculator {
             }
         }
 
-        if (stack.size() != 1) throw new IllegalArgumentException("Неверное выражение (лишние операторы)");
+        if (stack.size() != 1) throw new IllegalArgumentException("Неверное выражение");
         return stack.pop();
     }
 }
